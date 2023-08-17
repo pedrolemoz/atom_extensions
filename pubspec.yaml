@@ -1,0 +1,12 @@
+name: atom_extensions
+description: Atom Extensions
+version: 1.0.0
+
+environment:
+  sdk: ^3.0.6
+
+dependencies:
+  asp: any
+
+dev_dependencies:
+  test: ^1.21.0
