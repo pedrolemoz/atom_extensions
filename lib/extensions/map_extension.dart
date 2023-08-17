@@ -11,7 +11,7 @@ extension MapExtension<K, V> on Atom<Map<K, V>> {
   }
 
   V? operator [](Object? key) {
-    return this.value[key];
+    return value[key];
   }
 
   void operator []=(K key, V value) {
@@ -20,16 +20,16 @@ extension MapExtension<K, V> on Atom<Map<K, V>> {
   }
 
   void clear() {
-    this.value.clear();
+    value.clear();
     notifyListeners();
   }
 
   Iterable<K> get keys {
-    return this.value.keys;
+    return value.keys;
   }
 
   V? remove(Object? key) {
-    final result = this.value.remove(key);
+    final result = value.remove(key);
     if (result != null) {
       notifyListeners();
     }

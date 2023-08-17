@@ -12,11 +12,11 @@ extension SetExtension<T> on Atom<Set<T>> {
   }
 
   bool contains(Object? element) {
-    return this.value.contains(element);
+    return value.contains(element);
   }
 
   T? lookup(Object? element) {
-    return this.value.lookup(element);
+    return value.lookup(element);
   }
 
   bool remove(Object? value) {
@@ -28,9 +28,9 @@ extension SetExtension<T> on Atom<Set<T>> {
   }
 
   void clear() {
-    this.value.clear();
+    value.clear();
     notifyListeners();
   }
 
-  Set<T> toSet() => this.value;
+  Set<T> toSet() => value;
 }

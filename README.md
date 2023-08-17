@@ -16,6 +16,6 @@ myReactiveList.setValue(newList);
 With ASP, the same behavior is reduced to:
 
 ```dart
-final myReactiveList = Atom<List<int>>([]);
+final myReactiveList =  <int>[].createAtom();
 myReactiveList.add('Pedro Lemos');
 ```

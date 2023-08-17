@@ -4,7 +4,7 @@ import 'dart:math';
 
 import 'package:asp/asp.dart';
 
-extension ListExtension<T> on Atom<List<T>> {
+extension ReactiveListExtension<T> on Atom<List<T>> {
   Iterable<T> get reversed => value.reversed;
 
   Iterable<T> getRange(int start, int end) => value.getRange(start, end);
@@ -109,11 +109,6 @@ extension ListExtension<T> on Atom<List<T>> {
 
   void operator []=(int index, T other) {
     value[index] = other;
-    notifyListeners();
-  }
-
-  set length(int other) {
-    value.length = other;
     notifyListeners();
   }
 }
