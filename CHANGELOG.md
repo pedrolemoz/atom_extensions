@@ -1,4 +1,4 @@
-## 1.0.1
+## 1.1.0
 
 - Removed `notifyListeners` method invocation.
 - Renamed extensions to Reactive{Type}Extension.
