@@ -7,13 +7,20 @@ extension ReactiveListExtension<E> on Atom<List<E>> {
 
   E operator [](int index) => value[index];
 
-  void operator []=(int index, E value) => this.value = this.value..[index];
+  void operator []=(int index, E value) =>
+      this.value = this.value..[index] = value;
 
   set first(E value) => this.value = this.value..first = value;
 
+  E get first => value.first;
+
   set last(E value) => this.value = this.value..last = value;
 
+  E get last => value.last;
+
   set length(int newLength) => value = value..length = newLength;
+
+  int get length => value.length;
 
   void add(E value) => this.value = this.value..add(value);
 
@@ -37,7 +44,7 @@ extension ReactiveListExtension<E> on Atom<List<E>> {
 
   void clear() => value = value..clear();
 
-  void insert(int index, E element) => value..insert(index, element);
+  void insert(int index, E element) => value = value..insert(index, element);
 
   void insertAll(int index, Iterable<E> iterable) =>
       value = value..insertAll(index, iterable);
